@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class SpotifyService {
 
-  token = 'BQBxtHKO53hHPT42ao3-V23Ezuy86L1J9mvu0tX43CMUH8gTCZiFkJ8IkzgFRhT9OP3ok9L3JoQy-id-KVQ';
+  token = 'BQCLd53ZIQhUuYgp91kuLYhpBGwEelCve0Qb72RzqxKjtNbd9hT5TdpeE06nt2WshyJMown4N4nDRyGPKLY';
 
   constructor(
     private httpClient: HttpClient

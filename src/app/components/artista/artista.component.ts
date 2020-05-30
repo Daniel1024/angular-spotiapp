@@ -43,7 +43,6 @@ export class ArtistaComponent implements OnInit {
       .subscribe(
         res => {
           this.topTracks = res;
-          console.log(res);
         },
         error => {
           console.error(error);
