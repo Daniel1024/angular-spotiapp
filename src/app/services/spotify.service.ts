@@ -8,11 +8,12 @@ import { Observable } from 'rxjs';
 })
 export class SpotifyService {
 
-  token = 'BQCPytFjqoYV1vseN3B0WN_5sfAoSuUYdk-h8PfJkwuQWFqXX_OIKCukF4CfuPf2IWirUdWfGpLwm78o_i0';
+  token = 'BQBxtHKO53hHPT42ao3-V23Ezuy86L1J9mvu0tX43CMUH8gTCZiFkJ8IkzgFRhT9OP3ok9L3JoQy-id-KVQ';
 
   constructor(
     private httpClient: HttpClient
-  ) { }
+  ) {
+  }
 
   getQuery(query: string): Observable<any> {
     const url = `https://api.spotify.com/v1/${query}`;
@@ -28,8 +29,12 @@ export class SpotifyService {
       .pipe(map(data => data['albums'].items));
   }
 
-  getArtista(termino: string) {
+  getArtistas(termino: string) {
     return this.getQuery(`search?q=${termino}&type=artist&limit=15`)
       .pipe(map(data => data['artists'].items));
+  }
+
+  getArtista(id: string) {
+    return this.getQuery(`artists/${id}`);
   }
 }
