@@ -10,6 +10,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NoImagePipe } from './pipes/no-image.pipe';
 import { TarjetasComponent } from './components/shared/tarjetas/tarjetas.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { TarjetasComponent } from './components/shared/tarjetas/tarjetas.compone
     ArtistaComponent,
     NavbarComponent,
     NoImagePipe,
-    TarjetasComponent
+    TarjetasComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
